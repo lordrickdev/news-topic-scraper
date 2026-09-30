@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>NewsScope | Automated News Scraper</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0f19;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 25px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #3b82f6;
+            border-radius: 30px;
+            color: #60a5fa;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(45px, 8vw, 90px);
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #3b82f6;
+        }
+
+        .description {
+            max-width: 700px;
+            font-size: 20px;
+            line-height: 1.7;
+            color: #b8c1d1;
+            margin-bottom: 40px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .button {
+            text-decoration: none;
+            padding: 14px 22px;
+            border-radius: 10px;
+            background: #2563eb;
+            color: white;
+            font-weight: bold;
+        }
+
+        .button.secondary {
+            background: #182033;
+            border: 1px solid #334155;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: #111827;
+            border: 1px solid #253047;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: 70px;
+            padding-top: 25px;
+            border-top: 1px solid #253047;
+            color: #6b7280;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="badge">
+            NEWSCOPE PROJECT
+        </div>
+
+        <h1>
+            News<span>Scope</span>
+        </h1>
+
+        <p class="description">
+            A lightweight web application that automatically gathers
+            news from configurable online sources and filters articles
+            by specific topics.
+        </p>
+
+        <div class="buttons">
+            <a
+                class="button"
+                href="https://github.com/lordrickdev/news-topic-scraper"
+                target="_blank">
+                View Source Code
+            </a>
+
+            <a
+                class="button secondary"
+                href="https://github.com/lordrickdev/news-topic-scraper"
+                target="_blank">
+                GitHub Repository
+            </a>
+        </div>
+
+        <section class="features">
+
+            <div class="card">
+                <h3>🔎 News Search</h3>
+                <p>
+                    Search and filter collected news articles
+                    by configurable topics and keywords.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Automatic Scraping</h3>
+                <p>
+                    Automatically collects news from configured
+                    RSS, Atom and web sources.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📰 Multiple Sources</h3>
+                <p>
+                    Add and manage different news sources
+                    through the application configuration.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💾 SQLite Database</h3>
+                <p>
+                    Stores collected articles while preventing
+                    duplicate URLs.
+                </p>
+            </div>
+
+        </section>
+
+        <footer>
+            Built with Python · Flask · BeautifulSoup · Feedparser · SQLite
+            <br><br>
+            © 2026 Lordrick Caguicla
+        </footer>
+
+    </main>
+
+</body>
+</html>
